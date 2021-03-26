@@ -24,4 +24,4 @@ jobs:
         run: |
           # ${{ secrets.GITHUB_TOKEN}}
           docker build -t docker.pkg.github.com/af2111/nodejs-test-server/chat .  
-          docker push chat
+          docker push docker.pkg.github.com/af2111/nodejs-test-server/chat
