@@ -25,3 +25,12 @@ jobs:
           # ${{ secrets.GITHUB_TOKEN}}
           docker build -t docker.pkg.github.com/af2111/nodejs-test-server/chat .  
           docker push docker.pkg.github.com/af2111/nodejs-test-server/chat
+      -
+      name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: arthur.dws.coderdojo.net
+        port: 22
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: whoami
