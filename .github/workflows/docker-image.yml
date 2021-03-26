@@ -34,8 +34,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-          echo "${{secrets.GITHUB_TOKEN}}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-          docker pull docker.pkg.github.com/af2111/nodejs-test-server/chat
-          docker stop chat
-          docker rm chat
-          docker run -d -p 80:3000 --name chat docker.pkg.github.com/af2111/nodejs-test-server/chat
+            echo "${{secrets.GITHUB_TOKEN}}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+            docker pull docker.pkg.github.com/af2111/nodejs-test-server/chat
+            docker stop chat
+            docker rm chat
+            docker run -d -p 80:3000 --name chat docker.pkg.github.com/af2111/nodejs-test-server/chat
