@@ -15,5 +15,5 @@ jobs:
       -
         name: Build and Push
         run: |
-          docker build -t chat.  
+          docker build -t chat .  
           docker push chat
